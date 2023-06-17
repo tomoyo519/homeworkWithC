@@ -20,11 +20,14 @@ int main(void){
 }
 
 int SwapPoint(Point * ptr1, Point * ptr2){
-  Point ptr3 = {ptr1->xpos, ptr1->ypos};
-  ptr1->xpos = (ptr2->xpos);
-  ptr1->ypos = (ptr2->ypos);
-  ptr2->xpos = ptr3.xpos;
-  ptr2->ypos = ptr3.ypos;
+  // Point ptr3 = {ptr1->xpos, ptr1->ypos};
+  // ptr1->xpos = (ptr2->xpos);
+  // ptr1->ypos = (ptr2->ypos);
+  // ptr2->xpos = ptr3.xpos;
+  // ptr2->ypos = ptr3.ypos;
+  Point tmp = *ptr1;
+  *ptr1 = *ptr2;
+  *ptr2 = tmp;
   return 0;
 }
 
