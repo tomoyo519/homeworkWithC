@@ -21,7 +21,7 @@ int main(void){
 
 
     while(1){
-        tmp = (zinNum / zin);
+        tmp = (zinNum / zin) % zinbup;
         if(tmp<10){
             printf("%d", tmp);
         }else if(tmp>=10){
