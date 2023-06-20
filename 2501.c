@@ -42,12 +42,15 @@ int printFactor(int count){
         if(count % i ==0){
             arr[idx] = i;
             idx++;
-            if(i == (count / 2)){
-                printf("%d\n", i);
-                break;
-            }else{
-            printf("%d + ", i);
-            }
+          
+        }
+    }
+    // printf("idx:%d", idx);
+    for(int n=0; n<idx; n++){
+        if(n+1 ==idx){
+            printf("%d\n", arr[n]);
+        }else{
+            printf("%d + ", arr[n]);
         }
     }
 
